@@ -11,6 +11,7 @@ export default function dispatchEvent (target, type, detail) {
     let event = new CustomEvent(
         type,
         {
+            lory: target,
             bubbles: true,
             cancelable: true,
             detail: detail

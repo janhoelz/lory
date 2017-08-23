@@ -757,6 +757,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function dispatchEvent(target, type, detail) {
 	    var event = new _customEvent2.default(type, {
+	        lory: target,
 	        bubbles: true,
 	        cancelable: true,
 	        detail: detail
