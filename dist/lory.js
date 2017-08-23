@@ -721,6 +721,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	exports.default = dispatchEvent;
 	
 	var _customEvent = __webpack_require__(4);
@@ -738,10 +741,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	function dispatchEvent(target, type, detail) {
 	    var event = new _customEvent2.default(type, {
-	        lory: target,
 	        bubbles: true,
 	        cancelable: true,
-	        detail: detail
+	        detail: _extends({ target: target }, detail)
 	    });
 	
 	    target.dispatchEvent(event);
