@@ -91,5 +91,11 @@ export default {
      * If false, slides lory to the first slide on window resize.
      * @rewindOnResize {boolean}
      */
-    rewindOnResize: true
+    rewindOnResize: true,
+
+    /**
+     * Set to 1 if not passed
+     * @initialSlide {number}
+     */
+    initialSlide: 1
 };

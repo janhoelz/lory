@@ -385,7 +385,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            ease = _options5.ease,
 	            rewindSpeed = _options5.rewindSpeed,
 	            rewindOnResize = _options5.rewindOnResize,
-	            classNameActiveSlide = _options5.classNameActiveSlide;
+	            classNameActiveSlide = _options5.classNameActiveSlide,
+	            initialSlide = _options5.initialSlide;
 	
 	
 	        slidesWidth = slideContainer.getBoundingClientRect().width || slideContainer.offsetWidth;
@@ -398,7 +399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	
 	        if (rewindOnResize) {
-	            index = 0;
+	            index = initialSlide - 1;
 	        } else {
 	            ease = null;
 	            rewindSpeed = 0;
@@ -721,9 +722,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
 	exports.default = dispatchEvent;
 	
 	var _customEvent = __webpack_require__(4);
@@ -743,7 +741,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var event = new _customEvent2.default(type, {
 	        bubbles: true,
 	        cancelable: true,
-	        detail: _extends({ target: target }, detail)
+	        detail: detail
 	    });
 	
 	    target.dispatchEvent(event);
@@ -906,7 +904,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * If false, slides lory to the first slide on window resize.
 	   * @rewindOnResize {boolean}
 	   */
-	  rewindOnResize: true
+	  rewindOnResize: true,
+	
+	  /**
+	   * Set to 1 if not passed
+	   * @initialSlide {number}
+	   */
+	  initialSlide: 1
 	};
 
 /***/ }

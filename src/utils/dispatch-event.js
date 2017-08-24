@@ -13,7 +13,7 @@ export default function dispatchEvent (target, type, detail) {
         {
             bubbles: true,
             cancelable: true,
-            detail: { target, ...detail }
+            detail: detail
         }
     );
 
