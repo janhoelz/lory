@@ -399,7 +399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	
 	        if (rewindOnResize) {
-	            index = initialSlide;
+	            index = initialSlide * 1;
 	        } else {
 	            ease = null;
 	            rewindSpeed = 0;
