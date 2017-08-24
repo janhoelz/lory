@@ -399,7 +399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	
 	        if (rewindOnResize) {
-	            index = initialSlide - 1;
+	            index = initialSlide;
 	        } else {
 	            ease = null;
 	            rewindSpeed = 0;
@@ -907,10 +907,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  rewindOnResize: true,
 	
 	  /**
-	   * Set to 1 if not passed
+	   * used as initial Index, Starts from 0
 	   * @initialSlide {number}
 	   */
-	  initialSlide: 1
+	  initialSlide: 0
 	};
 
 /***/ }

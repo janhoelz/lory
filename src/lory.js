@@ -311,7 +311,7 @@ export function lory (slider, opts) {
         }
 
         if (rewindOnResize) {
-            index = initialSlide - 1
+            index = initialSlide;
         } else {
             ease = null;
             rewindSpeed = 0;

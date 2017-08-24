@@ -94,8 +94,8 @@ export default {
     rewindOnResize: true,
 
     /**
-     * Set to 1 if not passed
+     * used as initial Index, Starts from 0
      * @initialSlide {number}
      */
-    initialSlide: 1
+    initialSlide: 0
 };
