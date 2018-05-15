@@ -538,11 +538,19 @@ export function lory (slider, opts) {
     }
 
     function onResize (event) {
-        reset();
 
-        dispatchSliderEvent('on', 'resize', {
-            event
-        });
+        /* iOS Safari bug:
+         * triggers resize on every element when adress bar is hidden,
+         * so check if event is triggered by configured element
+         */
+        if(options.window == event.target){
+
+            reset();
+
+            dispatchSliderEvent('on', 'resize', {
+                event
+            });
+        }
     }
 
     // trigger initial setup
